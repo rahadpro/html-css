@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburger Menu Icons</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 35px;
+        grid-column-gap: 35px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      @media(max-width: 767.98px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media(max-width: 479.98px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+      .icon-box {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition-duration: 500ms;
+      }
+      .icon-box:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: rgba(100, 100, 111, 0.25) 0px 5px 15px 3px;
+      }
+      .hamburger-icon-1 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .hamburger-icon-1 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-duration: var(--duration);
+      }
+      .hamburger-icon-1:hover span,
+      .hamburger-icon-1.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+      }
+
+      /* Icon Two  */
+      .hamburger-icon-2 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        cursor: pointer;
+        position: relative;
+      }
+      .hamburger-icon-2 span {
+        position: absolute;
+        height: var(--bar-height);
+        width: 100%;
+        background-color: var(--bar-color);
+        transition-duration: var(--duration);
+        transform-origin: center;
+      }
+      .hamburger-icon-2 span:first-child {
+        top: 0;
+      }
+      .hamburger-icon-2 span:nth-child(2) {
+        top: calc(50% - var(--bar-height) / 2);
+      }
+      .hamburger-icon-2 span:last-child {
+        bottom: 0;
+      }
+      .hamburger-icon-2:hover span:first-child,
+      .hamburger-icon-2.active span:first-child {
+        transform: rotate(45deg);
+        top: calc(50% - var(--bar-height) / 2);
+      }
+
+      .hamburger-icon-2:hover span:nth-child(2),
+      .hamburger-icon-2.active span:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+
+      .hamburger-icon-2:hover span:last-child,
+      .hamburger-icon-2.active span:last-child {
+        width: 0;
+      }
+
+      /* Icon 3 */
+
+      .hamburger-icon-3 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .hamburger-icon-3 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: var(--duration), 0s;
+      }
+      .hamburger-icon-3:hover span,
+      .hamburger-icon-3.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(-315deg);
+        transition-delay: var(--duration), 0s;
+      }
+      /* Icon 4 */
+
+      .hamburger-icon-4 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .hamburger-icon-4 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: var(--duration), 0s;
+      }
+      .hamburger-icon-4:hover span,
+      .hamburger-icon-4.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(-315deg);
+        transition-delay: 0s, var(--duration);
+      }
+
+      /* Icon 5 */
+
+      .hamburger-icon-5 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .hamburger-icon-5 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: calc(var(--duration) * 2), 0s;
+      }
+      .hamburger-icon-5 span::before {
+        position: absolute;
+        width: var(--bar-height);
+        height: var(--width);
+        background: #000;
+        content: " ";
+        left: calc(50% - var(--bar-height) / 2);
+        top: calc(0px - (var(--width) + var(--width)));
+
+        transition-duration: var(--duration);
+        transition-delay: 0.6s;
+      }
+      .hamburger-icon-5:hover span,
+      .hamburger-icon-5.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(-315deg);
+        transition-delay: 0s, var(--duration);
+      }
+      .hamburger-icon-5:hover span::before,
+      .hamburger-icon-5.active span::before {
+        top: -27.5px;
+        transition-delay: 1.2s;
+      }
+
+      /* Icon 6 */
+
+      .hamburger-icon-6 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .hamburger-icon-6 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: var(--duration), 0s;
+      }
+      .hamburger-icon-6:hover span,
+      .hamburger-icon-6.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(45deg);
+        transition-delay: 0s, var(--duration);
+      }
+
+      /* Icon 7 */
+
+      .hamburger-icon-7 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .hamburger-icon-7 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: calc(var(--duration) * 2), var(--duration);
+      }
+      .hamburger-icon-7 span::before {
+        position: absolute;
+        width: var(--bar-height);
+        height: var(--width);
+        background: #000;
+        content: " ";
+        left: calc(50% - var(--bar-height) / 2);
+        top: calc(0px - (var(--width) + var(--width)));
+
+        transition-duration: var(--duration);
+        transition-delay: 0s;
+      }
+      .hamburger-icon-7:hover span,
+      .hamburger-icon-7.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(45deg);
+        transition-delay: 0s, var(--duration);
+      }
+      .hamburger-icon-7:hover span::before,
+      .hamburger-icon-7.active span::before {
+        top: -27.5px;
+        transition-delay: 1.2s;
+      }
+
+      /* Icon 8 */
+
+      .hamburger-icon-8 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .hamburger-icon-8 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: calc(var(--duration) * 2), 0s;
+      }
+      .hamburger-icon-8 span::before {
+        position: absolute;
+        width: var(--bar-height);
+        height: var(--width);
+        background: #000;
+        content: " ";
+        left: calc(50% - var(--bar-height) / 2);
+        top: calc(0px - (var(--width) + var(--width)));
+
+        transition-duration: var(--duration);
+        transition-delay: 0.6s;
+      }
+      .hamburger-icon-8:hover span,
+      .hamburger-icon-8.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(315deg);
+        transition-delay: 0s, var(--duration);
+      }
+      .hamburger-icon-8:hover span::before,
+      .hamburger-icon-8.active span::before {
+        top: -27.5px;
+        transition-delay: 1.2s;
+      }
+
+      /* Icon 9 */
+
+      .hamburger-icon-9 {
+        --width: 60px;
+        --height: 50px;
+        --bar-height: 4px;
+        --distance: calc(var(--height) / 2 - var(--bar-height) / 2);
+        --duration: 0.6s;
+        --bar-color: #262626;
+        width: var(--width);
+        height: var(--height);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .hamburger-icon-9::before {
+        position: absolute;
+        height: var(--bar-height);
+        width: 100%;
+        content: " ";
+        top: calc(50% - var(--bar-height) / 2);
+        background: var(--bar-color);
+        transition-duration: var(--duration);
+      }
+      .hamburger-icon-9 span {
+        display: block;
+        height: var(--bar-height);
+        margin-top: var(--distance);
+        background: var(--bar-color);
+        cursor: pointer;
+        box-shadow: 0px var(--distance) var(--bar-color),
+          0px calc(0px - var(--distance)) var(--bar-color);
+        transition-property: box-shadow, transform;
+        transition-duration: var(--duration);
+        transition-delay: var(--duration), 0s;
+      }
+      .hamburger-icon-9:hover span,
+      .hamburger-icon-9.active span {
+        box-shadow: var(--width) var(--distance) var(--bar-color),
+          calc(0px - var(--width)) calc(0px - var(--distance)) var(--bar-color);
+        transform: rotate(45deg);
+        transition-delay: 0s, var(--duration);
+      }
+      .hamburger-icon-9:hover::before,
+      .hamburger-icon-9.active::before {
+        transform: rotate(-45deg);
+        transition-delay: var(--duration);
+      }
+
+      /* Icon 10*/
+      .hamburger-icon-10 {
+        display: inline-block;
+        --width: 60px;
+        --barHeight: 5px;
+        --bar-color: #262626;
+        width: var(--width);
+        transition-duration: 0.45s;
+        cursor: pointer;
+      }
+      .hamburger-icon-10 {
+        /* padding-bottom: 11px; */
+      }
+
+      .hamburger-icon-10 span {
+        width: 100%;
+        height: var(--barHeight);
+        background-color: var(--bar-color);
+        display: block;
+        transition-duration: 0.3s;
+      }
+      .hamburger-icon-10 span:nth-child(2) {
+        margin-top: 9px;
+        margin-bottom: 9px;
+      }
+      .hamburger-icon-10.active {
+        margin-top: -3px;
+      }
+      .hamburger-icon-10:hover span:first-child,
+      .hamburger-icon-10.active span:first-child {
+        opacity: 0;
+      }
+      .hamburger-icon-10:hover span:nth-child(2),
+      .hamburger-icon-10.active span:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+      .hamburger-icon-10:hover span:last-child,
+      .hamburger-icon-10.active span:last-child {
+        margin-top: -14px;
+        transform: rotate(45deg);
+      }
+
+      /* Icon 11*/
+      .hamburger-icon-11 label[for="menu-icon"] {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+        --bar-color: #262626;
+      }
+
+      .hamburger-icon-11 label[for="menu-icon"] input[type="checkbox"] {
+        display: none;
+      }
+
+      .hamburger-icon-11 label[for="menu-icon"] input[type="checkbox"] ~ span {
+        width: 100%;
+        display: block;
+        background-color: var(--bar-color);
+        height: 5px;
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      }
+
+      .hamburger-icon-11
+        label[for="menu-icon"]
+        input[type="checkbox"]
+        ~ span:nth-of-type(2) {
+        margin: 6px 0;
+      }
+
+      .hamburger-icon-11
+        label[for="menu-icon"]:hover
+        input[type="checkbox"]
+        ~ span:nth-of-type(1),
+      .hamburger-icon-11
+        label[for="menu-icon"]
+        input[type="checkbox"]:checked
+        ~ span:nth-of-type(1) {
+        width: 50%;
+        transform: rotate(45deg) translate(5px, 2px);
+      }
+
+      .hamburger-icon-11
+        label[for="menu-icon"]:hover
+        input[type="checkbox"]
+        ~ span:nth-of-type(2),
+      .hamburger-icon-11
+        label[for="menu-icon"]
+        input[type="checkbox"]:checked
+        ~ span:nth-of-type(2) {
+        transform: rotate(-45deg);
+      }
+
+      .hamburger-icon-11
+        label[for="menu-icon"]:hover
+        input[type="checkbox"]
+        ~ span:nth-of-type(3),
+      .hamburger-icon-11
+        label[for="menu-icon"]
+        input[type="checkbox"]:checked
+        ~ span:nth-of-type(3) {
+        width: 50%;
+        transform: rotate(45deg) translate(7.3px, -14px);
+      }
+      /* Icon 12 */
+      .hamburger-icon-12 .menu-icon {
+        width: 35px;
+        cursor: pointer;
+        --bar-color: #262626;
+      }
+
+      .hamburger-icon-12 .menu-icon span {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: var(--bar-color);
+        transition-duration: 0.35s;
+      }
+
+      .hamburger-icon-12 .menu-icon span:nth-child(2) {
+        margin: 6px 0;
+      }
+
+      .hamburger-icon-12 .menu-icon:hover span:nth-child(1),
+      .hamburger-icon-12 .menu-icon.active span:nth-child(1) {
+        transform: translate(0, 11px) rotate(45deg);
+      }
+
+      .hamburger-icon-12 .menu-icon:hover span:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+
+      .hamburger-icon-12 .menu-icon:hover span:nth-child(3) {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-1"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-2"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-3"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-4"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-5"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-6"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-7"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-8"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-9"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div
+            class="hamburger-icon-10"
+            onclick="this.classList.toggle('active')"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div class="hamburger-icon-11">
+            <label for="menu-icon">
+              <input id="menu-icon" type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+        </div>
+        <div class="icon-box">
+          <div class="hamburger-icon-12">
+            <div onclick="this.classList.toggle('active')" class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
