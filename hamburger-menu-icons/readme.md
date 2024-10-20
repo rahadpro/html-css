@@ -18,7 +18,7 @@ Hamburger Menu Icons is a set of 12 unique, animated icons built using pure HTML
 
 ## Live Demo
 
-View the hamburger menu icons in action on the [Live Demo](https://your-live-demo-link.com).
+View the hamburger menu icons in action on the [Live Demo](https://humberger-menu-icons.netlify.app/).
 
 ## Features
 
@@ -29,7 +29,7 @@ View the hamburger menu icons in action on the [Live Demo](https://your-live-dem
 
 ## Installation & Usage
 
-- [Download ZIP](https://github.com/programmer-rahad/hamburger-menu-icons/archive/refs/heads/main.zip)
+- [Download ZIP](https://github.com/rahadpro/html-css/archive/refs/heads/main.zip)
 - Navigate to the project folder and open the `index.html` file in your preferred web browser.
 - Hover over or click on the hamburger menu icons to see the animations in action.
 
