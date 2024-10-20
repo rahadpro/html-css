@@ -4,8 +4,8 @@ Hamburger Menu Icons is a set of 12 unique, animated icons built using pure HTML
 
 ## Table of Contents
 
-1. [Live Demo](#live-demo)
-2. [Preview](#preview)
+1. [Preview](#preview)
+2. [Live Demo](#live-demo)
 3. [Features](#features)
 4. [Installation & Usage](#installation--usage)
 5. [Code Overview](#code-overview)
