@@ -1,0 +1,158 @@
+// Reset
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  object-fit: cover;
+  display: inline-block;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f3;
+}
+
+// Profile Card
+.profile-card {
+  $primary: #4070f3;
+  $secondary: #1453ff;
+  $text-color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 13px;
+  padding: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 45px;
+  margin-bottom: 42px;
+  transition-duration: 0.35s;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 13px 13px 0 0;
+    background-color: $primary;
+    transition-duration: 0.35s;
+  }
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 7px 10px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 18px;
+    &:before {
+      border-radius: 18px 18px 0 0;
+      background-color: $secondary;
+    }
+  }
+  &__image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: $primary;
+    padding: 3px;
+    margin-bottom: 10px;
+  }
+  &:hover {
+    &__image {
+      background-color: $secondary;
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  &__text-data {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    color: $text-color;
+  }
+  &__name {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  &__job {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  &__social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: $primary;
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  &__button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 24px;
+    background-color: $primary;
+    cursor: pointer;
+    transition: all 0.35s linear;
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+  &__analytics {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  &__analytics-data {
+    display: flex;
+    align-items: center;
+    color: #334;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7;
+    &:last-child {
+      border-right: none;
+    }
+    i {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  }
+}

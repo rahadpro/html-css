@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card using HTML, CSS, SCSS</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    /> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="profile-card">
+      <!-- Image -->
+      <div class="profile-card__image">
+        <img class="profile-card__img" src="https://raw.githubusercontent.com/programmer-rahad/images/refs/heads/main/users/1.jpg" alt="Profile img" />
+      </div>
+      <!-- Title with Subtitles -->
+      <div class="profile-card__text-data">
+        <span class="profile-card__name">John Doe</span>
+        <span class="profile-card__job">Senior Fullstack Developer</span>
+      </div>
+
+      <!-- Social icons -->
+      <div class="profile-card__social-icons">
+        <a class="profile-card__link" href="#">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a class="profile-card__link" href="#">
+          <i class="bx bxl-youtube"></i>
+        </a>
+        <a class="profile-card__link" href="#">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a class="profile-card__link" href="#">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a class="profile-card__link" href="#">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Subscribe & Message Buttons  -->
+      <div class="profile-card__buttons">
+        <button class="profile-card__button">Subscribe</button>
+        <button class="profile-card__button">Message</button>
+      </div>
+
+      <!-- Analytics -->
+      <div class="profile-card__analytics">
+        <div class="profile-card__analytics-data">
+          <i class="bx bx-heart"></i>
+          <span class="profile-card__number">60K</span>
+        </div>
+        <div class="profile-card__analytics-data">
+          <i class="bx bx-message-rounded"></i>
+          <span class="profile-card__number">20K</span>
+        </div>
+        <div class="profile-card__analytics-data">
+          <i class="bx bx-share"></i>
+          <span class="profile-card__number">12K</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
