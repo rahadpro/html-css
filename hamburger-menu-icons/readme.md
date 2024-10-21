@@ -29,7 +29,7 @@ View the hamburger menu icons in action on the [Live Demo](https://humberger-men
 
 ## Installation & Usage
 
-- [Download ZIP](https://github.com/rahadpro/html-css/archive/refs/heads/main.zip)
+- [Download ZIP](https://github.com/programmer-rahad/hamburger-menu-icons/archive/refs/heads/main.zip)
 - Navigate to the project folder and open the `index.html` file in your preferred web browser.
 - Hover over or click on the hamburger menu icons to see the animations in action.
 
@@ -47,7 +47,7 @@ View the hamburger menu icons in action on the [Live Demo](https://humberger-men
 
 ## Author
 
-Created and maintained by [Rahad](https://www.github.com/rahadpro).  
+Created and maintained by [Rahad](https://www.rahad.me).  
 For inquiries or feedback, feel free to reach out.
 
 **Note:** This project is part of my portfolio and is not intended for use or modification by others.  
