@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+  display: inline-block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f3;
+}
+
+.login-form {
+  max-width: 500px;
+  width: calc(100% - 37px);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 45px;
+  margin-bottom: 42px;
+}
+.login-form__title {
+  height: 120px;
+  background-color: #0292fe;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.36s;
+}
+.login-form form {
+  padding: 25px 35px;
+}
+.login-form__input-box {
+  height: 60px;
+  margin-top: 15px;
+  position: relative;
+}
+.login-form__input-box i {
+  position: absolute;
+  width: 55px;
+  height: 100%;
+  color: #fff;
+  font-size: 22px;
+  background: #0292fe;
+  border: 1px solid #0292fe;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.36s;
+}
+.login-form input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 70px;
+  border-radius: 5px;
+  border: 1px solid #e6e3e3;
+  font-size: 18px;
+  transition: all 0.3s linear;
+}
+.login-form input::placeholder {
+  color: #999;
+}
+.login-form input:focus {
+  border-color: #0487eb;
+}
+.login-form__forgot-pass {
+  margin-top: 12px;
+}
+.login-form__forgot-pass a {
+  color: #0292fe;
+  font-size: 17px;
+  text-decoration: none;
+}
+.login-form__forgot-pass a:hover {
+  text-decoration: underline;
+}
+.login-form__submit-btn input {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0;
+  background: #0292fe;
+  border: 1px solid #0292fe;
+  cursor: pointer;
+  transition-duration: 0.36s;
+}
+.login-form__submit-btn input:hover {
+  background: #037cda !important;
+}
+.login-form__signup-link {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 17px;
+}
+.login-form__signup-link a {
+  color: #0292fe;
+  text-decoration: none;
+}
+.login-form__signup-link a:hover {
+  text-decoration: underline;
+}
+.login-form:hover .login-form__title,
+.login-form:hover .login-form__submit-btn input {
+  background: #0487eb;
+}
+.login-form:hover .login-form__input-box i {
+  background: #0487eb;
+}
+@media (max-width: 575.98px) {
+  .login-form form {
+    padding: 20px 28px;
+  }
+}/*# sourceMappingURL=style.css.map */

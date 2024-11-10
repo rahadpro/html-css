@@ -1,0 +1,147 @@
+// Reset
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  object-fit: cover;
+  display: inline-block;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f3;
+}
+
+// Login Form
+@mixin login-form() {
+  $primary: #0292fe;
+  $secondary: #0487eb;
+  .login-form {
+    max-width: 500px;
+    width: calc(100% - 37px);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+    margin-top: 45px;
+    margin-bottom: 42px;
+    &__title {
+      height: 120px;
+      background-color: $primary;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition-duration: 0.36s;
+    }
+    form {
+      padding: 25px 35px;
+    }
+    &__input-box {
+      height: 60px;
+      margin-top: 15px;
+      position: relative;
+      i {
+        position: absolute;
+        width: 55px;
+        height: 100%;
+        color: #fff;
+        font-size: 22px;
+        background: $primary;
+        border: 1px solid $primary;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.36s;
+      }
+    }
+    input {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding-left: 70px;
+      border-radius: 5px;
+      border: 1px solid #e6e3e3;
+      font-size: 18px;
+      transition: all 0.3s linear;
+      &::placeholder {
+        color: #999;
+      }
+      &:focus {
+        border-color: $secondary;
+      }
+    }
+    &__forgot-pass {
+      margin-top: 12px;
+      a {
+        color: $primary;
+        font-size: 17px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__submit-btn {
+      input {
+        margin-top: 20px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 0;
+        background: $primary;
+        border: 1px solid $primary;
+        cursor: pointer;
+        transition-duration: 0.36s;
+
+        &:hover {
+          background: #037cda !important;
+        }
+      }
+    }
+    &__signup-link {
+      text-align: center;
+      margin-top: 45px;
+      font-size: 17px;
+      a {
+        color: $primary;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &:hover {
+      .login-form__title,
+      .login-form__submit-btn input {
+        background: $secondary;
+      }
+      .login-form__input-box {
+        i {
+          background: $secondary;
+        }
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      form {
+        padding: 20px 28px;
+      }
+    }
+  }
+}
+
+@include login-form();
